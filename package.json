@@ -15,12 +15,12 @@
     "framer-motion": "^7.1.0",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
-    "@heroicons/react": "^1.0.6",
-    "eslint": "8.21.0",
-    "eslint-config-next": "12.2.5",
-    "styled-components": "^5.3.5"
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
