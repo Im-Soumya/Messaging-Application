@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
+      height: {
+        18: "70px",
+      },
       padding: {
         1.4: "6px",
         1.5: "7px",
