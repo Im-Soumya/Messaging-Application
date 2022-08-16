@@ -5,21 +5,17 @@ import { auth, db } from "../firebase";
 import { getRecipientEmail } from "../lib/getRecipientEmail";
 import { getRecipientName } from "../lib/getRecipientName";
 
-const Chat = ({ id, users }) => {
+const Contact = ({ id, users }) => {
   const router = useRouter();
-  const [user] = useAuthState(auth);
+  const [userLoggedIn] = useAuthState(auth);
 
-  const usersRef = db
-    .collection("users")
-    .where("email", "==", getRecipientEmail(users, user));
+  const recipientName = users[2];
+
+  const usersRef = db.collection("users").where("email", "==", users[1]);
   const [userSnapshot] = useCollection(usersRef);
 
   const recipient = userSnapshot?.docs?.[0]?.data();
-  const recipientEmail = getRecipientEmail(users, user);
-  console.log(recipientEmail);
 
-  const recipientName = getRecipientName(users, user);
-  // console.log(recipientName);
   const startChat = () => {
     router.push(`/chat/${id}`);
   };
@@ -53,9 +49,9 @@ const Chat = ({ id, users }) => {
           </svg>
         </div>
       )}
-      <p>{recipientEmail}</p>
+      <p>{users[2]}</p>
     </div>
   );
 };
 
-export default Chat;
+export default Contact;
