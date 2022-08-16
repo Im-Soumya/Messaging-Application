@@ -1,12 +1,39 @@
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useCollection } from "react-firebase-hooks/firestore";
 import { MdOutlineMoreVert, MdInfoOutline } from "react-icons/md";
 
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
+import Message from "./Message";
 
 const ChatScreen = ({ chat, messages }) => {
   const [user] = useAuthState(auth);
   const router = useRouter();
+
+  const messagesRef = db
+    .collection("chats")
+    .doc(router.query.id)
+    .collection("messages")
+    .orderBy("timestamp", "asc");
+  const [messagesSnapshot] = useCollection(messagesRef);
+
+  console.log(messagesSnapshot);
+
+  const showMessages = () => {
+    if (messagesSnapshot) {
+      return messagesSnapshot.docs.map((message) => (
+        <Message
+          key={message.id}
+          user={message.data().user}
+          message={{
+            ...message.data(),
+            timestamp: message.data().timestamp?.toDate().getTime(),
+          }}
+        />
+      ));
+    }
+  };
+
   return (
     <div>
       <header className="sticky bg-white z-100 top-0 flex p-3 h-20 items-center border-b-1 border-b-indigo-600">
@@ -38,7 +65,7 @@ const ChatScreen = ({ chat, messages }) => {
       </header>
 
       <div className="">
-        {/* showmessages */}
+        {showMessages()}
         {/* <EndOfMessages /> */}
       </div>
     </div>

@@ -7,7 +7,7 @@ const Header = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="flex justify-between items-center py-6 border-b-1 border-b-gray-400">
+    <div className="flex justify-between items-center px-8 py-4 border-b-1 border-b-gray-400">
       <div className="flex items-center">
         <BiMessageSquareDots className="text-3xl mr-4" />
         <h1 className="text-xl font-semibold">Messaging</h1>

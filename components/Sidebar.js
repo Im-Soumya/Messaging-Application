@@ -70,8 +70,8 @@ const Sidebar = () => {
 
   return (
     <>
-      <div>
-        <div className="flex justify-between items-center h-14 sticky top-0 bg-white z-1 ml-2">
+      <div className="w-80 border-r-1 border-r-indigo-400">
+        <div className="flex justify-between items-center h-14 sticky top-0 bg-white z-1 mx-2">
           <h1 className="text-lg font-semibold">Chats</h1>
 
           <div className="flex items-center">

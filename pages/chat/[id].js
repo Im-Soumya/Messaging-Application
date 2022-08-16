@@ -10,18 +10,18 @@ const Chat = ({ chat, messages }) => {
   // const [user] = useAuthState(auth)
 
   return (
-    <div className="flex">
+    <div className="flex flex-col">
       <Head>
         <title>Chat</title>
       </Head>
+      <Header />
 
-      <div>
-        <Header />
+      <div className="flex ml-4">
         <Sidebar />
-      </div>
 
-      <div className="flex-1 overflow-scroll h-screen">
-        <ChatScreen chat={chat} messages={messages} />
+        <div className="flex-1">
+          <ChatScreen chat={chat} messages={messages} />
+        </div>
       </div>
     </div>
   );
