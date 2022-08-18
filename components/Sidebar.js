@@ -18,6 +18,7 @@ import {
 
 import { auth, db } from "../firebase";
 import Contact from "./Contact";
+import "./Sidebar.module.css";
 
 const Sidebar = () => {
   const [username, setUsername] = useState("");
@@ -70,7 +71,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="w-80 border-r-1 border-r-indigo-400">
+      <div className="h-89 min-w-300 max-w-350 overflow-y-scroll border-r-1 border-r-indigo-400 .no-scrollbar">
         <div className="flex justify-between items-center h-14 sticky top-0 bg-white z-1 mx-2">
           <h1 className="text-lg font-semibold">Chats</h1>
 

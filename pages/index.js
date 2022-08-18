@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-7">
+      <main>
         <Header />
         <Sidebar />
       </main>
