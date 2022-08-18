@@ -104,9 +104,11 @@ const ChatScreen = ({ chat, messages }) => {
         )}
 
         <div className=" ml-2 flex-1">
-          <h1 className="text-sm font-semibold">{recipientName}</h1>
+          <h1 className="text-sm font-semibold">
+            {recipient ? recipient?.name : recipientName}
+          </h1>
           {recipient ? (
-            recipient.lastSeen.toDate() ? (
+            recipient?.lastSeen?.toDate() ? (
               <TimeAgo datetime={recipient.lastSeen.toDate()} />
             ) : (
               <p>Last seen status not available</p>

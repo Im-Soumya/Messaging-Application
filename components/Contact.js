@@ -27,14 +27,10 @@ const Contact = ({ id, users }) => {
     >
       {recipient ? (
         <div className="mr-3">
-          <img
-            className="w-8 h-8 rounded-full"
-            src={recipient.photoURL}
-            alt=""
-          />
+          <img className="w-8 h-8 rounded-xl" src={recipient.photoURL} alt="" />
         </div>
       ) : (
-        <div className="overflow-hidden relative w-8 h-8 mr-3 bg-gray-100 rounded-full dark:bg-gray-300 cursor-pointer hover:bg-gray-400 focus:bg-indigo-200 duration-200">
+        <div className="overflow-hidden relative w-8 h-8 mr-3 bg-gray-100 rounded-xl dark:bg-gray-300 cursor-pointer hover:bg-gray-400 focus:bg-indigo-200 duration-200">
           <svg
             className="absolute -left-1 w-10 h-10 text-gray-100"
             fill="currentColor"
@@ -49,7 +45,7 @@ const Contact = ({ id, users }) => {
           </svg>
         </div>
       )}
-      <p>{users[2]}</p>
+      <p>{recipient ? recipient?.name : users[2]}</p>
     </div>
   );
 };

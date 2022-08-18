@@ -7,26 +7,26 @@ const Header = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="flex justify-between items-center px-8 py-4 border-b-1 border-b-gray-400">
+    <div className="flex justify-between items-center px-8 py-5 border-b-1 border-b-gray-400">
       <div className="flex items-center">
-        <BiMessageSquareDots className="text-3xl mr-4" />
-        <h1 className="text-xl font-semibold">Messaging</h1>
+        <BiMessageSquareDots className="text-white text-3xl mr-4" />
+        <h1 className="text-white text-xl font-semibold">Messaging</h1>
       </div>
 
       <div className="flex items-center justify-evenly">
-        <div className="flex items-center mr-4">
+        <div className="flex items-center justify-end mr-4">
           <input
-            className="outline-none w-full py-1 indent-3 border-1 border-r-0 rounded-l-lg border-indigo-200"
+            className="placeholder:text-silver-chalice bg-cetacean-blue-2 bg-opacity-85 outline-none w-2/3 py-2 indent-5 rounded-l-lg"
             type="text"
-            placeholder="Search in chats"
+            placeholder="Search"
           />
-          <div className="border-1 border-l-0 border-indigo-200 py-2 pr-3 rounded-r-lg">
-            <BsSearch className="text-gray-600" />
+          <div className="bg-cetacean-blue-2 bg-opacity-85 py-3 pr-5 rounded-r-lg">
+            <BsSearch className="text-white" />
           </div>
         </div>
 
         <button className="mr-4 p-2.5 rounded-full focus:bg-indigo-200 duration-200">
-          <BsBell className="text-xl cursor-pointer " />
+          <BsBell className="text-xl text-white cursor-pointer " />
         </button>
 
         {user ? (

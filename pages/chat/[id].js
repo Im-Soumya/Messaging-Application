@@ -14,6 +14,7 @@ const Chat = ({ chat, messages }) => {
       <Head>
         <title>Chat</title>
       </Head>
+
       <Header />
 
       <div className="flex ml-4">
