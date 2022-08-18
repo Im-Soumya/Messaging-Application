@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         "work-sans": "Work Sans",
       },
+      margin: {
+        0.1: "1px",
+      },
       minWidth: {
         300: "300px",
       },
@@ -17,7 +20,7 @@ module.exports = {
         350: "350px",
       },
       minHeight: {
-        68: "72vh",
+        66: "66vh",
       },
       borderWidth: {
         1: "1px",
@@ -41,12 +44,15 @@ module.exports = {
       },
       colors: {
         "vampire-black": "#050509",
+        "russian-violet": "#230c33",
+        "deep-violet": "#894CFB",
+        "weird-blue": "#131448",
         "cetacean-blue-1": "#04052e",
-        "cetacean-blue-2": "#140152",
+        "cetacean-blue-2": "#2A0160",
         "royal-brown": "#56382e",
         "space-cadet": "#170e5f",
         "davy-gray": "#575353",
-        "dark-slate-blue": "#00b4d8",
+        "dark-slate-blue": "#483D8B",
         "spicy-mix": "#97584d",
         cinereous: "#92837C",
         "silver-chalice": "#b0acae",

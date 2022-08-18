@@ -7,10 +7,10 @@ const Header = () => {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="flex justify-between items-center px-8 py-5 border-b-1 border-b-gray-400">
+    <div className="flex justify-between items-center px-8 py-5 border-b-1 border-b-gray-900">
       <div className="flex items-center">
-        <BiMessageSquareDots className="text-white text-3xl mr-4" />
-        <h1 className="text-white text-xl font-semibold">Messaging</h1>
+        <BiMessageSquareDots className="text-fuchsia-700 text-2xl mr-3" />
+        <h1 className="text-white text-xl">Messaging</h1>
       </div>
 
       <div className="flex items-center justify-evenly">
@@ -20,12 +20,12 @@ const Header = () => {
             type="text"
             placeholder="Search"
           />
-          <div className="bg-cetacean-blue-2 bg-opacity-85 py-3 pr-5 rounded-r-lg">
+          <div className="bg-cetacean-blue-2 py-3 pr-5 rounded-r-lg">
             <BsSearch className="text-white" />
           </div>
         </div>
 
-        <button className="mr-4 p-2.5 rounded-full focus:bg-indigo-200 duration-200">
+        <button className="mr-4 p-2.5 rounded-full focus:bg-cetacean-blue-2 duration-75">
           <BsBell className="text-xl text-white cursor-pointer " />
         </button>
 

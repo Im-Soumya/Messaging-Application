@@ -17,7 +17,7 @@ export default function Home() {
         <Sidebar />
       </main>
 
-      <footer className="flex flex-1 py-3.2 border-t-1 justify-center items-center">
+      <footer className="flex flex-1 py-3.2 border-t-1 border-t-gray-900 justify-center items-center">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"

@@ -1,23 +1,20 @@
 import Head from "next/head";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import ChatScreen from "../../components/ChatScreen";
-import { auth, db } from "../../firebase";
+import { db } from "../../firebase";
 
 const Chat = ({ chat, messages }) => {
-  // const [user] = useAuthState(auth)
-
   return (
-    <div className="flex flex-col">
+    <div className="overflow-y-hidden flex flex-col bg-gradient-to-br from-vampire-black via-cetacean-blue-1 to-cetacean-blue-2">
       <Head>
         <title>Chat</title>
       </Head>
 
       <Header />
 
-      <div className="flex ml-4">
+      <div className="flex">
         <Sidebar />
 
         <div className="flex-1">

@@ -2,10 +2,20 @@ import { useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase/compat/app";
+import { extendTheme } from "@chakra-ui/react";
+import "@fontsource/work-sans";
+
 import { auth, db } from "../firebase";
 import Login from "../components/Login";
 import Loader from "../components/Loader";
 import "../styles/globals.css";
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Work sans', sans-serif`,
+    body: `'Work sans', sans-serif`,
+  },
+});
 
 function MyApp({ Component, pageProps }) {
   const [user, loading] = useAuthState(auth);
@@ -35,7 +45,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

@@ -58,20 +58,20 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="h-89 min-w-300 max-w-350 pl-3 overflow-y-hidden border-r-1 border-r-indigo-400">
+      <div className="h-89 min-w-300 max-w-350 overflow-y-hidden border-r-1 border-r-gray-900">
         <div className="flex justify-between items-center h-14 sticky top-0 z-1 mx-2">
-          <h1 className="text-white pl-1 text-lg font-semibold">Chats</h1>
+          <h1 className="text-white pl-4 text-base font-semibold">Chats</h1>
 
           <div className="flex items-center">
             <button
               onClick={onOpen}
-              className="text-sky-400 p-2.5 mr-2 rounded-full"
+              className="text-purple-400 p-2.5 mr-2 rounded-full"
             >
               <RiChatNewLine className="text-xl" />
             </button>
 
             <button className="p-1 focus:bg-cetacean-blue-2 rounded-full">
-              <MdOutlineMoreVert className="text-2xl" />
+              <MdOutlineMoreVert className="text-purple-400 text-2xl" />
             </button>
           </div>
         </div>
@@ -83,19 +83,27 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <Drawer isOpen={isOpen} onClose={onClose} placement="right">
+      <Drawer
+        colorScheme="black"
+        isOpen={isOpen}
+        onClose={onClose}
+        placement="right"
+      >
         <DrawerOverlay />
 
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader fontSize="1.4rem" borderBottomWidth="1px">
+          <DrawerHeader fontSize="1.3rem" borderBottomWidth="1px">
             Add Contact
           </DrawerHeader>
 
           <DrawerBody>
             <form onSubmit={createChat}>
               <div className="mb-7">
-                <h1 className="text-lg mb-2 font-semibold" htmlFor="username">
+                <h1
+                  className="text-lg mb-2 font-semibold tracking-wide"
+                  htmlFor="username"
+                >
                   Name
                 </h1>
                 <input
@@ -104,12 +112,15 @@ const Sidebar = () => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   placeholder="Please enter user name"
-                  className="placeholder:font-semibold placeholder:text-base border-1 border-indigo-300 py-2 indent-3 w-full rounded-md focus:outline-blue-500"
+                  className="placeholder:text-base border-1 border-indigo-300 py-2 indent-3 w-full rounded-md focus:outline-blue-500"
                 />
               </div>
 
               <div>
-                <h1 className="text-lg mb-2 font-semibold" htmlFor="username">
+                <h1
+                  className="text-lg mb-2 font-semibold tracking-wide"
+                  htmlFor="username"
+                >
                   Email
                 </h1>
                 <input
@@ -118,7 +129,7 @@ const Sidebar = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Please enter user mail"
-                  className="placeholder:font-semibold placeholder:text-base border-1 border-indigo-300 py-2 indent-3 w-full rounded-md focus:outline-blue-500"
+                  className="placeholder:text-base border-1 border-indigo-300 py-2 indent-3 w-full rounded-md focus:outline-blue-500"
                 />
               </div>
 
