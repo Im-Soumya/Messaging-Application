@@ -12,8 +12,8 @@ import "../styles/globals.css";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Work sans', sans-serif`,
-    body: `'Work sans', sans-serif`,
+    heading: `'Figtree', sans-serif`,
+    body: `'Figtree', sans-serif`,
   },
 });
 
@@ -31,8 +31,6 @@ function MyApp({ Component, pageProps }) {
         },
         { merge: true }
       );
-
-      console.log(user.displayName);
     }
   }, [user]);
 
@@ -41,7 +39,11 @@ function MyApp({ Component, pageProps }) {
   }
 
   if (!user) {
-    return <Login />;
+    return (
+      <div>
+        <Login />
+      </div>
+    );
   }
 
   return (

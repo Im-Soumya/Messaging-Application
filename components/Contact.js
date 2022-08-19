@@ -49,7 +49,7 @@ const Contact = ({ id, users }) => {
           </svg>
         </div>
       )}
-      <p className="tracking-tighter text-gray-400">
+      <p className="tracking-tight text-gray-400">
         {recipient ? recipient?.name : recipientName}
       </p>
     </div>

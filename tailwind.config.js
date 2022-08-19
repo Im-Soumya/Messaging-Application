@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "work-sans": "Work Sans",
+        figtree: "Figtree",
       },
       margin: {
         0.1: "1px",
@@ -18,6 +18,7 @@ module.exports = {
       maxWidth: {
         15: "60px",
         350: "350px",
+        1040: "1040px",
       },
       minHeight: {
         66: "66vh",

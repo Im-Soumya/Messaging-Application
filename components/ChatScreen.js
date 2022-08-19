@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import firebase from "firebase/compat/app";
+import TimeAgo from "timeago-react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { MdOutlineMoreVert } from "react-icons/md";
 import { RiSendPlane2Fill } from "react-icons/ri";
-import TimeAgo from "timeago-react";
+import { BiMicrophone } from "react-icons/bi";
+import { MdOutlineAttachFile } from "react-icons/md";
 
 import { auth, db } from "../firebase";
 import { getRecipientEmail } from "../lib/getRecipientEmail";
@@ -107,7 +109,7 @@ const ChatScreen = ({ chat, messages }) => {
         )}
 
         <div className="ml-3 flex-1 flex flex-col justify-center">
-          <h1 className="text-base pt-2 pb-0 font-semibold">
+          <h1 className="text-gray-300 text-base pt-2 pb-0 font-semibold">
             {recipient ? recipient?.name : recipientName}
           </h1>
           {recipient ? (
@@ -136,26 +138,37 @@ const ChatScreen = ({ chat, messages }) => {
         <div ref={endOfMessagesRef}></div>
       </div>
 
-      <form className="bottom-0 sticky flex items-center pl-4 -ml-0.1 pb-3 border-l-1 border-l-gray-900 z-100">
-        <input
-          className="placeholder:text-gray-600 flex-1 indent-4 bg-transparent outline-none text-silver-chalice border-1 border-gray-900 rounded-md items-center p-2 sticky bottom-0 z-100 focus:border-gray-500"
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Write a message"
-        />
-        <button
-          disabled={!input}
-          type="submit"
-          className="hidden"
-          onClick={sendMessage}
-        >
-          Send
+      <div className="bottom-0 sticky w-full flex items-center -ml-0.1 pb-3 border-l-1 border-l-gray-900 z-100 focus:bg-cetacean-blue-1">
+        <button className="p-2 ml-1 text-xl text-gray-500 rounded-full hover:text-gray-300 focus:bg-cetacean-blue-1">
+          <MdOutlineAttachFile />
         </button>
-        <button className="p-2 rounded-full mx-3">
-          <RiSendPlane2Fill className="text-fuchsia-400 text-2xl " />
+
+        <button className="p-2 mr-2 text-xl text-gray-500 rounded-full hover:text-gray-300 focus:bg-cetacean-blue-1">
+          <BiMicrophone />
         </button>
-      </form>
+        <form className="w-full flex">
+          <input
+            className="w-full placeholder:text-gray-600 flex-1 indent-4 bg-transparent outline-none text-silver-chalice border-1 border-gray-800 rounded-md items-center p-2 sticky bottom-0 z-100 focus:border-gray-400"
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Write a message"
+          />
+
+          <button
+            disabled={!input}
+            type="submit"
+            className="hidden"
+            onClick={sendMessage}
+          >
+            Send
+          </button>
+
+          <button className="p-2 rounded-full mx-2">
+            <RiSendPlane2Fill className="text-fuchsia-400 text-2xl " />
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
