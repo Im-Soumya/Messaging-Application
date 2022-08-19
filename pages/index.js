@@ -16,7 +16,6 @@ export default function Home() {
         <Header />
         <div className="flex">
           <Sidebar />
-          <Screen />
         </div>
       </main>
 
