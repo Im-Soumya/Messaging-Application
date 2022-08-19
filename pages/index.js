@@ -12,9 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="font-figtree">
+      <main className="flex flex-col font-figtree">
         <Header />
-        <Sidebar />
+        <div className="flex">
+          <Sidebar />
+          <Screen />
+        </div>
       </main>
 
       <footer className="flex flex-1 py-3.2 border-t-1 border-t-gray-900 justify-center items-center">
