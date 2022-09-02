@@ -127,7 +127,7 @@ const ChatScreen = ({ chat, messages }) => {
         </div>
 
         <div>
-          <button className="p-1.5 rounded-full text-xl focus:bg-cetacean-blue-2 duration-200">
+          <button className="p-1 rounded-full text-2xl focus:bg-cetacean-blue-2 duration-200">
             <MdOutlineMoreVert />
           </button>
         </div>
