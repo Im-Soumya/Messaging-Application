@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, [user]);
 
-  if (!loading) {
+  if (loading) {
     return <Loader />;
   }
 
