@@ -2,15 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
 
-@layer base {
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+}
+
+/* @layer base {
   @font-face {
     font-family: "Figtree";
     src: url("/fonts/Figtree.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
-    font-style: normal;
+    font-style: normal
   }
+} */
+
+.circle {
+  @apply w-4 h-4 mx-1.5 my-1 bg-slate-200 rounded-full;
 }
 
 html,

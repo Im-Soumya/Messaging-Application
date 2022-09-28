@@ -57,6 +57,22 @@ module.exports = {
         "spicy-mix": "#97584d",
         cinereous: "#92837C",
         "silver-chalice": "#b0acae",
+        "google-blue": "#4285f4",
+        "google-green": "#34a853",
+        "google-yellow": "#fbbc05",
+        "google-red": "#ea4335",
+        coral: "#ff7f50",
+      },
+      animation: {
+        bounce: "bounce 0.8s infinite alternate",
+      },
+      keyframes: {
+        bounce: {
+          to: {
+            opacity: 0.1,
+            transform: "translate3d(0, -1rem, 0)",
+          },
+        },
       },
     },
   },

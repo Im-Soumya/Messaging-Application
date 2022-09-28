@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { FaGoogle } from "react-icons/fa";
 import { BiMessageSquareDots } from "react-icons/bi";
 
 import { auth, provider } from "../firebase";
@@ -36,7 +35,7 @@ const Login = () => {
               href="https://twitter.com/iamsoumyass"
               target="_blank"
               rel="noreferrer"
-              className="p-2 mr-10 hover:border-b-1 hover:border-b-white hover:text-white duration-100"
+              className="p-2 mr-7 hover:border-b-1 hover:border-b-white hover:text-white duration-100"
             >
               Twitter
             </a>
@@ -45,7 +44,7 @@ const Login = () => {
               href="mailto:contact@soumyamukherjee.work@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="py-2 px-5 hover:border-b-1 hover:border-b-white hover:text-white duration-100"
+              className="py-2 mx-3 hover:border-b-1 hover:border-b-white hover:text-white duration-100"
             >
               Contact Me
             </a>
@@ -53,22 +52,29 @@ const Login = () => {
         </header>
 
         <div className="flex flex-col items-center justify-center text-gray-200 mt-8">
-          <h1 className="text-8xl font-black mb-6 bg-gradient-to-r from-rose-500 via-purple-500 to-sky-500 bg-clip-text text-transparent">
+          {/* <h1 className="text-8xl font-bold mb-6 bg-gradient-to-r from-rose-500 via-purple-500 to-sky-500 bg-clip-text text-transparent">
             Chat App
           </h1>
 
           <h1 className="flex text-8xl font-bold pb-5 bg-gradient-to-r from-indigo-500 via-emerald-500 to-cyan-300 bg-clip-text text-transparent">
             Reimagined.
+          </h1> */}
+
+          <h1 className="text-8xl font-bold mb-4 tracking-tight">Chat App</h1>
+          <h1 className="text-8xl font-bold pb-5 tracking-tight bg-gradient-to-r from-rose-500 via-purple-500 to-sky-500 bg-clip-text text-transparent">
+            Reimagined.
           </h1>
 
           <button
             onClick={signIn}
-            className="flex items-center py-4 px-14 mt-7 rounded-full text-xl font-semibold tracking-wider bg-gradient-to-r from-indigo-600 via-cyan-600 to-sky-500 hover:scale-110 transition-all duration-150"
+            className="flex items-center py-5 px-9 mt-7 rounded-md text-xl font-semibold tracking-wider border-2 border-sky-400 hover:scale-110 transition-all delay-150 duration-150"
           >
-            Login with{" "}
-            <span className="ml-2">
-              <FaGoogle />
-            </span>
+            Login with <span className="ml-2 text-google-blue">G</span>
+            <span className="text-google-red">o</span>
+            <span className="text-google-yellow">o</span>
+            <span className="text-google-blue">g</span>
+            <span className="text-google-green">l</span>
+            <span className="text-google-red">e</span>
           </button>
         </div>
       </div>
