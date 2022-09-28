@@ -1,3 +1,12 @@
+# A chat application
+
+### Visit this [website](https://next-chat-app-beta.vercel.app/) 
+
+![image](https://user-images.githubusercontent.com/91958667/189510367-1eb83fca-a8a6-4faa-b8f8-f721a8f64bc5.png)
+
+![image](https://user-images.githubusercontent.com/91958667/189510394-be22eac3-c1bb-481b-9e65-ae8ad3225cd1.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -11,12 +20,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 
