@@ -2,10 +2,7 @@
 
 ### Visit this [website](https://next-chat-app-beta.vercel.app/) 
 
-![image](https://user-images.githubusercontent.com/91958667/189510367-1eb83fca-a8a6-4faa-b8f8-f721a8f64bc5.png)
-
-![image](https://user-images.githubusercontent.com/91958667/189510394-be22eac3-c1bb-481b-9e65-ae8ad3225cd1.png)
-
+![chat app](https://user-images.githubusercontent.com/91958667/192956597-1e3ab79f-ddf4-4f85-a073-1fdc29d3cf94.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
