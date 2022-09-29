@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BsBell, BsSearch } from "react-icons/bs";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,10 +9,12 @@ const Header = () => {
 
   return (
     <div className="flex justify-between items-center px-8 py-5 border-b-1 border-b-gray-900">
-      <div className="flex items-center">
-        <BiMessageSquareDots className="text-fuchsia-700 text-2xl mr-3" />
-        <h1 className="text-white text-xl">Messaging</h1>
-      </div>
+      <Link href="/">
+        <a className="flex items-center">
+          <BiMessageSquareDots className="text-fuchsia-700 text-2xl mr-3" />
+          <h1 className="text-white text-xl">Messaging</h1>
+        </a>
+      </Link>
 
       <div className="flex items-center justify-evenly">
         <div className="flex items-center justify-end mr-4">

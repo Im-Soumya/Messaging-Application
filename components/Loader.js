@@ -6,7 +6,7 @@ const Loader = () => {
 
     <div className="grid place-items-center h-screen bg-gradient-to-br from-vampire-black via-cetacean-blue-1 to-cetacean-blue-2">
       <div className="flex">
-        <h1 className="text-5xl font-bold font-figtree tracking-wide">
+        <h1 className="text-5xl font-semibold font-figtree tracking-wide">
           Loading
         </h1>
         <div className="flex ml-1 mt-7">
