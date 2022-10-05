@@ -1,10 +1,17 @@
-# A chat application
+# Messaging application
+
+Users can login easily with their google account and send messages to anyone. Just enter the email of the person you want to talk to and give a nickname. If the other person is on this app, the conversation will start.😁
 
 ### Visit this [website](https://next-chat-app-beta.vercel.app/) 
 
 ![chat app](https://user-images.githubusercontent.com/91958667/192956597-1e3ab79f-ddf4-4f85-a073-1fdc29d3cf94.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+### Resources used:
+  * Next.js
+  * Firebase
+  * Tailwind
 
 ## Getting Started
 
