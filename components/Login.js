@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BiMessageSquareDots } from "react-icons/bi";
 
 import { auth, provider } from "../firebase";
+import Error from "../components/Error";
 
 const Login = () => {
   const signIn = () => {
@@ -15,7 +16,7 @@ const Login = () => {
         <title>Login</title>
       </Head>
 
-      <div className="grid place-items-center h-screen bg-gradient-to-br from-vampire-black via-cetacean-blue-1 to-cetacean-blue-2 text-silver-chalice">
+      <div className="hidden place-items-center h-screen bg-gradient-to-br from-vampire-black via-cetacean-blue-1 to-cetacean-blue-2 text-silver-chalice md:grid">
         <header className="top-0 absolute w-full flex items-center justify-between h-20 px-28">
           <div className="flex items-center">
             <BiMessageSquareDots className="text-3xl text-purple-600" />
@@ -82,6 +83,8 @@ const Login = () => {
           </div>
         </div>
       </div>
+
+      <Error />
     </div>
   );
 };

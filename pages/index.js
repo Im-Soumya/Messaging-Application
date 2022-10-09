@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
+import Error from "../components/Error";
 
 export default function Home() {
   return (
@@ -12,26 +13,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col font-figtree">
+      <main className="hidden flex-col font-figtree md:flex">
         <Header />
         <div className="flex">
           <Sidebar />
         </div>
+        <footer className="flex flex-1 py-3.2 border-t-1 border-t-gray-900 justify-center items-center">
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center flex-grow-1 text-sm"
+          >
+            Powered by{" "}
+            <span>
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                width={60}
+                height={13}
+              />
+            </span>
+          </a>
+        </footer>
       </main>
-
-      <footer className="flex flex-1 py-3.2 border-t-1 border-t-gray-900 justify-center items-center">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-center items-center flex-grow-1 text-sm"
-        >
-          Powered by{" "}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={60} height={13} />
-          </span>
-        </a>
-      </footer>
+      <Error />
     </div>
   );
 }

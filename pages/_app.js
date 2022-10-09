@@ -9,6 +9,7 @@ import { auth, db } from "../firebase";
 import Login from "../components/Login";
 import Loader from "../components/Loader";
 import "../styles/globals.css";
+import Error from "../components/Error";
 
 const theme = extendTheme({
   fonts: {
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
+      <Error />
       <Component {...pageProps} />
     </ChakraProvider>
   );
